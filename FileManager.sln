@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager.ui", "FileManager\FileManager.ui.csproj", "{EE0E97A9-EC62-4204-9C7E-58626FA9B7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager.Intf", "FileManager.Intf\FileManager.Intf.csproj", "{4002D4FC-DCF6-4068-BD73-0273108A9BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginTestApp", "PluginTestApp\PluginTestApp.csproj", "{B40F51FE-7128-4B8E-B5E6-391E83F91E04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{35AA1988-C791-43B6-AA72-D20510BA1FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManagerGameExtention", "..\practice\practice\FileManagerGameExtention\FileManagerGameExtention.csproj", "{356F39AE-B306-46FC-9F57-C15024368D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileViewerPlugin", "FileViewerPlugin\FileViewerPlugin.csproj", "{95C35428-43FE-4EAC-9F5D-27D60C5C97D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUtils", "WpfUtils\WpfUtils.csproj", "{056905E6-9455-442E-AEC0-53C81079168F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonTestApp", "AvalonTestApp\AvalonTestApp.csproj", "{452D2808-AC34-40A8-9A0B-A6F1459712E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE0E97A9-EC62-4204-9C7E-58626FA9B7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0E97A9-EC62-4204-9C7E-58626FA9B7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0E97A9-EC62-4204-9C7E-58626FA9B7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0E97A9-EC62-4204-9C7E-58626FA9B7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4002D4FC-DCF6-4068-BD73-0273108A9BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4002D4FC-DCF6-4068-BD73-0273108A9BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4002D4FC-DCF6-4068-BD73-0273108A9BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4002D4FC-DCF6-4068-BD73-0273108A9BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40F51FE-7128-4B8E-B5E6-391E83F91E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40F51FE-7128-4B8E-B5E6-391E83F91E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40F51FE-7128-4B8E-B5E6-391E83F91E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40F51FE-7128-4B8E-B5E6-391E83F91E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356F39AE-B306-46FC-9F57-C15024368D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356F39AE-B306-46FC-9F57-C15024368D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356F39AE-B306-46FC-9F57-C15024368D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356F39AE-B306-46FC-9F57-C15024368D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C35428-43FE-4EAC-9F5D-27D60C5C97D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C35428-43FE-4EAC-9F5D-27D60C5C97D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C35428-43FE-4EAC-9F5D-27D60C5C97D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C35428-43FE-4EAC-9F5D-27D60C5C97D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056905E6-9455-442E-AEC0-53C81079168F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056905E6-9455-442E-AEC0-53C81079168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056905E6-9455-442E-AEC0-53C81079168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056905E6-9455-442E-AEC0-53C81079168F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452D2808-AC34-40A8-9A0B-A6F1459712E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452D2808-AC34-40A8-9A0B-A6F1459712E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452D2808-AC34-40A8-9A0B-A6F1459712E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452D2808-AC34-40A8-9A0B-A6F1459712E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B40F51FE-7128-4B8E-B5E6-391E83F91E04} = {35AA1988-C791-43B6-AA72-D20510BA1FBE}
+		{356F39AE-B306-46FC-9F57-C15024368D64} = {35AA1988-C791-43B6-AA72-D20510BA1FBE}
+		{95C35428-43FE-4EAC-9F5D-27D60C5C97D9} = {35AA1988-C791-43B6-AA72-D20510BA1FBE}
+	EndGlobalSection
+EndGlobal
