@@ -20,7 +20,7 @@ namespace WpfUtils
             {
                 if (getContainer != null)
                 {
-                    ms_Container = new CompositionContainer();
+                    ms_Container = getContainer();
                 }
             }
         }

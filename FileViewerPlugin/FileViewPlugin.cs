@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using FileManager.Intf;
 using Version = FileManager.Intf.Version;
 
@@ -37,7 +32,10 @@ namespace FileViewerPlugin
         public string Description { get { return "File browser"; } }
         public void ApplyPlugin()
         {
-            m_Controller.SetPluginControl(this, new FileViewControl(), null);
+            var control = new FileViewControl {DataContext = new MainViewModel(m_Context)};
+            m_Controller.SetPluginControl(this, control, null);
         }
+
+        
     }
 }
