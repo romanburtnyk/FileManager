@@ -29,6 +29,12 @@ namespace FileManager.ui
                 var container = new CompositionContainer(aggregCatalog);
                 return container;
             });
+#if TRACE
+            //LogManager.Configure(() => new TraceLogger());
+#elif DEBUG
+            //LogManager.Configure(() => new DebugLogger());
+#endif
+
         }
     }
 }

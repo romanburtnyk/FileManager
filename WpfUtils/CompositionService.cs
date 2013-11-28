@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
+using System.Linq;
 using System.Reflection;
 
 namespace WpfUtils
@@ -18,11 +20,11 @@ namespace WpfUtils
             {
                 if (getContainer != null)
                 {
-                    ms_Container = getContainer();
+                    ms_Container = new CompositionContainer();
                 }
             }
         }
-
+        
         public static void AddExport<T>(T value)
         {
             lock (ms_SyncObject)
@@ -32,7 +34,7 @@ namespace WpfUtils
                     var batch = new CompositionBatch();
                     var contractName = AttributedModelServices.GetContractName(typeof (T));
                     batch.AddExport(new Export(contractName, () => value));
-                    ms_Container.Compose(batch);
+                    GetContainer().Compose(batch);
                 }
             }
         }
@@ -45,7 +47,7 @@ namespace WpfUtils
             {
                 if (ms_Container != null)
                 {
-                    result = ms_Container.GetExportedValue<T>();
+                    result = GetContainer().GetExportedValue<T>();
                 }
             }
             return result;
@@ -58,7 +60,7 @@ namespace WpfUtils
             {
                 if (ms_Container != null)
                 {
-                    result = ms_Container.GetExportedValue<T>(contractName);
+                    result = GetContainer().GetExportedValue<T>(contractName);
                 }
             }
             return result;
@@ -70,9 +72,16 @@ namespace WpfUtils
             {
                 if (ms_Container != null)
                 {
-                    ms_Container.ComposeParts(value);
+                    GetContainer().ComposeParts(value);
                 }
             }
         }
+
+
+        private static CompositionContainer GetContainer()
+        {
+            return ms_Container;
+        }
+
     }
 }

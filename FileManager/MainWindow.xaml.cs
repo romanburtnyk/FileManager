@@ -16,10 +16,5 @@ namespace FileManager.ui
             mainViewModel.Initialize();
             DataContext = mainViewModel;
         }
-
-        private void Control_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
     }
 }
