@@ -38,7 +38,7 @@ namespace FileManager.ui
                 }
                 catch (Exception ex)
                 {
-                    Logger.Instance.Log(String.Format("Plugin raise an exception:{0}, Plugin: {1}", ex.Message, PluginLoadingHelper.PluginTostring(plugin) ), LogPriority.Warning);
+                    LogManager.Error(String.Format("Plugin raise an exception:{0}, Plugin: {1}", ex.Message, PluginLoadingHelper.PluginTostring(plugin) ));
                 }
             }
         }
@@ -55,7 +55,7 @@ namespace FileManager.ui
                 }
                 catch (Exception ex)
                 {
-                    Logger.Instance.Log(ex.Message + "  " + PluginLoadingHelper.PluginTostring(plugin), LogPriority.Warning);
+                    LogManager.Error(ex.Message + "  " + PluginLoadingHelper.PluginTostring(plugin));
                 }
             }
         }

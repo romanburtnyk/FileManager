@@ -2,7 +2,7 @@
 
 namespace FileViewerPlugin
 {
-    public class FileInfoViewModel:ViewModel
+    public class FileInfoViewModel : ViewModel, IFileInfoViewModel
     {
         private readonly FileSystemInfo m_Info;
         private bool m_IsDirectory;

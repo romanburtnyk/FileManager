@@ -28,16 +28,16 @@ namespace FileManager.ui
             {
                 if (maxVersionPlugin.Version.CompareTo(plugin.Version) == -1)
                 {
-                    Logger.Instance.Log(String.Format("Found previous version of plugin.       Current version:" + PluginTostring(plugin) +
-                        "          Previous version: " + PluginTostring(maxVersionPlugin)), LogPriority.Warning);
+                    LogManager.Warning(String.Format("Found previous version of plugin.       Current version:" + PluginTostring(plugin) +
+                        "          Previous version: " + PluginTostring(maxVersionPlugin)));
                     maxVersionPlugin = plugin;
                 }
                 else
                 {
                     if (maxVersionPlugin != plugin)
                     {
-                        Logger.Instance.Log(String.Format("Found previous version of plugin.     Current version: " +
-                                          PluginTostring(maxVersionPlugin) +"        Previous version: " + PluginTostring(plugin)), LogPriority.Warning);
+                        LogManager.Warning(String.Format("Found previous version of plugin.     Current version: " +
+                                          PluginTostring(maxVersionPlugin) +"        Previous version: " + PluginTostring(plugin)));
                     }
                 }
             }
@@ -49,8 +49,8 @@ namespace FileManager.ui
             bool result = plugin.SupportedManagerVersion.IsCompartibleWith(version);
             if (!result)
             {
-                Logger.Instance.Log(String.Format(String.Format("Not compatible plugin. Aplication version: {0}, Plugin: ({1})",
-                    version, PluginTostring(plugin))), LogPriority.Warning);;
+                LogManager.Warning(String.Format(String.Format("Not compatible plugin. Aplication version: {0}, Plugin: ({1})",
+                    version, PluginTostring(plugin))));
             }
             return result;
         }

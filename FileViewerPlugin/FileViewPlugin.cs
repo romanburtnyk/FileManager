@@ -8,14 +8,12 @@ namespace FileViewerPlugin
     [Export(typeof(IPlugin))]
     public class FileViewPlugin:IPlugin
     {
-        private readonly IPluginContext m_Context;
         private readonly IPluginViewController m_Controller;
         private readonly IContextPubliser m_Publisher;
 
         [ImportingConstructor]
-        public FileViewPlugin(IPluginContext context, IPluginViewController controller, IContextPubliser publisher)
+        public FileViewPlugin(IPluginViewController controller, IContextPubliser publisher)
         {
-            m_Context = context;
             m_Controller = controller;
             m_Publisher = publisher;
         }
@@ -32,7 +30,7 @@ namespace FileViewerPlugin
         public string Description { get { return "File browser"; } }
         public void ApplyPlugin()
         {
-            var control = new FileViewControl {DataContext = new MainViewModel(m_Context)};
+            var control = new FileViewControl {DataContext = new MainViewModel()};
             m_Controller.SetPluginControl(this, control, null);
         }
 
